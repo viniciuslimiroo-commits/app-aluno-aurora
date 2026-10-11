@@ -14,8 +14,18 @@ small{display:block;margin-top:18px;opacity:.55}
 <img src="icon-512.png" alt="">
 <h1>Aurora Aluno</h1>
 <p>App do aluno com carteirinha digital.</p>
-<a class="b" href="aurora.apk" download>Baixar para Android (1 MB)</a>
-<a class="s" href="./">iPhone: abrir e adicionar à Tela de Início</a>
+<div id="android"><a class="b" href="aurora.apk" download>Baixar para Android (1 MB)</a>
 <ol><li>Toque em Baixar e abra o arquivo.</li><li>Se o celular pedir, permita instalar apps desta fonte.</li><li>Toque em Instalar. O ícone Aurora aparece na tela.</li></ol>
+<a class="s" href="#" id="toIos" style="margin-top:18px">Tem iPhone? Ver como instalar</a></div>
+<div id="ios" hidden><a class="b" href="./">Abrir o app no Safari</a>
+<ol><li>Abra esta página no <b>Safari</b> (no Chrome do iPhone não funciona).</li><li>Toque em <b>Abrir o app no Safari</b>.</li><li>Toque no botão Compartilhar <span style="display:inline-block;border:1.5px solid #fff;border-radius:4px;padding:0 5px;font-size:12px">&#8679;</span> na barra de baixo.</li><li>Role e toque em <b>Adicionar à Tela de Início</b>, depois em <b>Adicionar</b>.</li><li>O ícone Aurora aparece na tela. Abra uma vez com internet e depois funciona offline.</li></ol>
+<a class="s" href="#" id="toAnd" style="margin-top:18px">Tem Android? Baixar o APK</a></div>
+<script>
+var ios=/iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+function show(i){document.getElementById('ios').hidden=!i;document.getElementById('android').hidden=i}
+show(ios);
+document.getElementById('toIos').onclick=function(e){e.preventDefault();show(true)};
+document.getElementById('toAnd').onclick=function(e){e.preventDefault();show(false)};
+</script>
 <small>Protótipo com instituição e dados fictícios.</small>
 </div></body></html>
