@@ -251,7 +251,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-r
       <div class="sec"><h3>Próxima aula</h3><button data-tab="agenda">Ver agenda</button></div>
       <div class="panel next">
         <div class="time"><b>19:00</b><span>hoje</span></div>
-        <div><div class="t">Direito Penal II</div><div class="s">Sala 304 · Prof. Ricardo Alves</div></div>
+        <div><div class="t">Dentística I</div><div class="s">Laboratório 2 · Prof. Ricardo Alves</div></div>
       </div>
 
       <div class="sec"><h3>Serviços</h3></div>
@@ -267,7 +267,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-r
       <div class="sec"><h3>Avisos</h3></div>
       <div class="panel rows">
         <div class="row"><div class="grow"><div class="t">Rematrícula aberta</div><div class="s">Prazo até 30/11/2026</div></div><span class="pill warn">Pendente</span></div>
-        <div class="row"><div class="grow"><div class="t">Prova AV2 de Direito Penal II</div><div class="s">Sexta, 19:00</div></div><span class="pill info">Lembrete</span></div>
+        <div class="row"><div class="grow"><div class="t">Prova AV2 de Dentística I</div><div class="s">Sexta, 19:00</div></div><span class="pill info">Lembrete</span></div>
       </div>
     </div>
   </section>
@@ -289,7 +289,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-r
           </div>
         </div>
         <div class="photo"><img src="foto.jpg" alt="Foto da estudante"></div>
-        <div class="who"><div class="name">Karen Moraes Silva</div><div class="course">Direito · Bacharelado</div></div>
+        <div class="who"><div class="name">Karen Moraes Silva</div><div class="course">Odontologia · Bacharelado</div></div>
         <dl>
           <div><dt>Matrícula</dt><dd>0000.2026.0042</dd></div>
           <div><dt>Nascimento</dt><dd>14/08/1997</dd></div>
@@ -338,7 +338,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-r
       <div class="profile">
         <div class="ava"><img src="foto.jpg" alt=""></div>
         <b>Karen Moraes Silva</b>
-        <span>Direito · 4º período · Campus Centro</span>
+        <span>Odontologia · 4º período · Campus Centro</span>
       </div>
       <div class="panel rows">
         <div class="row"><div class="grow"><div class="s">E-mail institucional</div><div class="t">karen.moraes@aurora.edu</div></div></div>
@@ -366,10 +366,10 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-r
         <div class="panel"><b>3/4</b><span>Concluídas</span></div>
       </div>
       <div class="panel rows">
-        <div class="row"><div class="grow"><div class="t">Direito Constitucional</div><div class="s">AV1 8,0 · AV2 9,0</div><div class="bar"><i style="width:85%"></i></div></div><span class="grade">8,5</span></div>
-        <div class="row"><div class="grow"><div class="t">Teoria Geral do Processo</div><div class="s">AV1 9,0 · AV2 9,0</div><div class="bar"><i style="width:90%"></i></div></div><span class="grade">9,0</span></div>
-        <div class="row"><div class="grow"><div class="t">Português Jurídico</div><div class="s">AV1 7,5 · AV2 8,1</div><div class="bar"><i style="width:78%"></i></div></div><span class="grade">7,8</span></div>
-        <div class="row"><div class="grow"><div class="t">Direito Penal II</div><div class="s">AV1 8,2 · AV2 sexta</div><div class="bar"><i style="width:41%"></i></div></div><span class="pill warn">Em curso</span></div>
+        <div class="row"><div class="grow"><div class="t">Anatomia de Cabeça e Pescoço</div><div class="s">AV1 8,0 · AV2 9,0</div><div class="bar"><i style="width:85%"></i></div></div><span class="grade">8,5</span></div>
+        <div class="row"><div class="grow"><div class="t">Periodontia</div><div class="s">AV1 9,0 · AV2 9,0</div><div class="bar"><i style="width:90%"></i></div></div><span class="grade">9,0</span></div>
+        <div class="row"><div class="grow"><div class="t">Farmacologia</div><div class="s">AV1 7,5 · AV2 8,1</div><div class="bar"><i style="width:78%"></i></div></div><span class="grade">7,8</span></div>
+        <div class="row"><div class="grow"><div class="t">Dentística I</div><div class="s">AV1 8,2 · AV2 sexta</div><div class="bar"><i style="width:41%"></i></div></div><span class="pill warn">Em curso</span></div>
       </div>
     </div>
   </section>
@@ -436,7 +436,7 @@ function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clea
 $$('[data-toast]').forEach(b=>b.addEventListener('click',()=>toast(b.dataset.toast)));
 
 const SHEETS={
-  avisos:['Avisos','Rematrícula aberta até 30/11/2026. Prova AV2 de Direito Penal II na sexta, às 19:00.'],
+  avisos:['Avisos','Rematrícula aberta até 30/11/2026. Prova AV2 de Dentística I na sexta, às 19:00.'],
   biblioteca:['Biblioteca','Na versão completa: livros emprestados, renovação e reserva de salas de estudo.'],
   documentos:['Documentos','Na versão completa: declaração de matrícula, histórico e atestado de frequência em PDF.'],
   ajuda:['Como usar a carteirinha','Abra a aba Validação e mostre o QR code. Ele muda a cada 30 segundos e funciona sem internet.'],
@@ -474,9 +474,9 @@ setInterval(()=>{
 },1000);
 
 // Agenda
-const AG={1:[['19:00','Direito Penal II','Sala 304 · Presencial'],['20:50','Português Jurídico','Online · ao vivo']],
-  2:[['19:00','Direito Constitucional','Sala 210 · Presencial']],3:[['19:00','Teoria Geral do Processo','Sala 118 · Presencial']],
-  4:[['20:50','Monitoria de Penal','Biblioteca · opcional']],5:[['19:00','Prova AV2 · Direito Penal II','Sala 304','exam']]};
+const AG={1:[['19:00','Dentística I','Laboratório 2 · Prático'],['20:50','Farmacologia','Online · ao vivo']],
+  2:[['19:00','Anatomia de Cabeça e Pescoço','Sala 210 · Presencial']],3:[['19:00','Periodontia','Sala 118 · Presencial']],
+  4:[['20:50','Monitoria de Dentística','Biblioteca · opcional']],5:[['19:00','Prova AV2 · Dentística I','Laboratório 2','exam']]};
 const DN=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
 function renderDays(){
   const d0=new Date(),box=$('#days');box.innerHTML='';
