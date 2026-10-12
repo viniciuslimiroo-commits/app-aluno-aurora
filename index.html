@@ -285,7 +285,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-r
         <div class="top">
           <div class="r">
             <div class="brand"><svg viewBox="0 0 24 24" fill="none"><path d="M3 18 L12 4 L21 18" stroke="#fff" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M7.5 18 a4.5 4.5 0 0 1 9 0" stroke="#f2a33a" stroke-width="2.4"/></svg>AURORA</div>
-            <span class="tag">Estudante</span>
+            <span class="tag">Demonstração</span>
           </div>
         </div>
         <div class="photo"><img src="foto.jpg" alt="Foto da estudante"></div>
@@ -296,7 +296,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-r
           <div><dt>Campus</dt><dd>Centro</dd></div>
           <div><dt>Validade</dt><dd>30/06/2027</dd></div>
         </dl>
-        <div class="status"><span class="live"></span>Matrícula ativa · 2026.2 · <span id="nowtime">00:00:00</span></div>
+        <div class="status"><span class="live"></span>Matrícula ativa · 2026.2</div>
         <div class="holo"></div>
       </div>
 
@@ -309,15 +309,16 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-r
           </div>
           <div class="code" id="code">AUR-0000-0000</div>
           <div class="secs" id="secs">Novo código em 30 s</div>
-          <p>Mostre na portaria, na biblioteca ou no cinema. O código muda a cada 30 segundos, então um print não funciona.</p>
+          <p>Mostre na portaria ou na biblioteca. O código muda a cada 30 segundos.</p>
         </div>
+        <div class="wm"><span>DEMONSTRAÇÃO · SEM VALIDADE</span></div>
       </div>
 
       <div class="card-actions">
         <button class="btn" data-toast="Brilho no máximo para leitura (simulação)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>Brilho</button>
         <button class="btn" data-toast="Adicionada à Carteira do celular (simulação)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12h2M3 10h18"/></svg>Carteira</button>
       </div>
-      <p class="tip">Funciona sem internet. A hora no cartão anda em tempo real, o que mostra que não é uma foto.</p>
+      <p class="tip">Funciona sem internet.</p>
     </div>
   </section>
 
@@ -438,7 +439,7 @@ const SHEETS={
   avisos:['Avisos','Rematrícula aberta até 30/11/2026. Prova AV2 de Direito Penal II na sexta, às 19:00.'],
   biblioteca:['Biblioteca','Na versão completa: livros emprestados, renovação e reserva de salas de estudo.'],
   documentos:['Documentos','Na versão completa: declaração de matrícula, histórico e atestado de frequência em PDF.'],
-  ajuda:['Como usar a carteirinha','Abra a aba Validação e mostre o QR code. Ele muda a cada 30 segundos e funciona sem internet. A hora no cartão anda em tempo real.'],
+  ajuda:['Como usar a carteirinha','Abra a aba Validação e mostre o QR code. Ele muda a cada 30 segundos e funciona sem internet.'],
   privacidade:['Privacidade e dados','A carteirinha mostra só o necessário para identificar o estudante. CPF e documentos ficam fora da tela.']
 };
 function sheet(k){const [t,p]=SHEETS[k];$('#sheetT').textContent=t;$('#sheetP').textContent=p;$('#scrim').classList.add('on');$('#sheet').classList.add('on')}
@@ -470,9 +471,7 @@ setInterval(()=>{
   left--;if(left<=0)refresh();
   $('#secs').textContent='Novo código em '+left+' s';
   $('#ring').style.strokeDashoffset=653.5*(1-left/30);
-  $('#nowtime').textContent=new Date().toLocaleTimeString('pt-BR');
 },1000);
-$('#nowtime').textContent=new Date().toLocaleTimeString('pt-BR');
 
 // Agenda
 const AG={1:[['19:00','Direito Penal II','Sala 304 · Presencial'],['20:50','Português Jurídico','Online · ao vivo']],
