@@ -1,4 +1,4 @@
-const CACHE = 'aurora-v3';
+const CACHE = 'aurora-v4';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png', './foto.jpg'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
@@ -9,7 +9,7 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
   if (e.request.mode === 'navigate') {
-    // página: tenta a rede para pegar a versão nova; sem internet, usa a cópia guardada
+    // pagina: tenta a rede para pegar a versao nova; sem internet, usa a copia guardada
     e.respondWith(fetch(e.request).then(r => { const c = r.clone(); caches.open(CACHE).then(k => k.put('./', c)); return r; })
       .catch(() => caches.match('./')));
     return;
